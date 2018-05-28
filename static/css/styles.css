@@ -373,10 +373,6 @@ aside a, aside a:visited {
 
 /*     */
 
-.home-menu.pure-menu-open {
-    background: #3b8bba;
-}
-
 .pure-menu.pure-menu-open, .pure-menu.pure-menu-horizontal li .pure-menu-children {
      background: #fff;
      border: none;
