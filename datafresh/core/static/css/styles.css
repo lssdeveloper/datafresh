@@ -43,9 +43,7 @@ a {
     text-align: left;
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
 }
-.home-menu.pure-menu-open {
-    background: #3b8bba;
-}
+
 .pure-menu.pure-menu-open.pure-menu-fixed {
     border-bottom: none;
     z-index: 4;
@@ -374,7 +372,5 @@ aside a, aside a:visited {
 }
 
 /*     */
-.pure-menu.pure-menu-open, .pure-menu.pure-menu-horizontal li .pure-menu-children {
-    background: #fff;
-    /* border: 1px solid #b7b7b7; */
-}
+
+
