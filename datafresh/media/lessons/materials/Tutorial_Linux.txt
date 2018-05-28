@@ -1,0 +1,122 @@
+Tutorial Linux
+
+//***********************************************************************************************************//
+
+Instalando o Guardião Itau
+
+sudo apt-get install libnss3-tools libcurl3
+
+sudo dpkg -i warsaw_setup_64.deb 
+
+reiniciar o computador
+
+
+//***********************************************************************************************************//
+
+
+Instalando impressora Epson L365
+De sempre preferência para instalação no terminal, pois às vezes faz-se necessário instalar algumas dependências.
+
+comando para instalar qualquer pacote .deb
+Obs: O ideal é que se coloque sempre na pasta pessoal o arquivo com extensão .deb
+
+$ sudo dpkg -i *.deb
+
+se acontecer algum erro de dependências, utilize o comando abaixo para realizar atualizção e continuar a instalação.
+
+$ sudo apt-get -f install 
+
+
+As vezes há necessidade de se instalar os bancos todos de uma vez, o caso do scanner.
+Extrai-se os arquivos .deb, copia para pasta pessoal.
+Com o mesmo comando sudo dpkg -i *.deb instala-se o sacenner.
+
+Obs: qdo estiver instalando os pacotes de dependências e quiser removê-los utilize.
+
+$ sudo apt autoremove
+
+
+Abra o terminal e entre como administrador,
+execute o comando:
+apt-get install lsb.
+Apos isto abra
+-Configurações de sistema
+-Impressoras
+-Adicionar
+Escolha Epson, na lista vai aparecer o modelo de sua impressora.
+
+
+
+//***************************************************************************************************************//
+
+
+
+
+Baixando um arquivo para instalação
+Exemplo retirado da Instalação do Java (http://www.edivaldobrito.com.br/instalar-java-no-linux-veja-como-fazer-isso-manualmente/)
+
+
+wget  link -0  <nome do aqruivo>
+
+wget => comando que fazo download (comando para baixar arquivos)
+link => entre na página que quer salvar o arquivo com botão direito copie o link
+-0 => PARÂMETRO default para salvar na Pasta pessoal
+<nome do aqruivo> => salvo com o nome que eu quiser
+
+
+Ex:
+
+wget http://javadl.oracle.com/webapps/download/AutoDL?BundleId=220305_d54c1d3a095b4ff2b6607d096fa80163 -O jre-linux.tar.gz
+
+//***************************************************************************************************************//
+
+Criando uma pasta.
+
+sudo mkdir /usr/lib/jvm
+
+//***************************************************************************************************************//
+
+Execute o comando abaixo para descomprimir o pacote baixado, para a pasta criada;
+
+sudo tar zxvf jre-linux.tar.gz -C /usr/lib/jvm
+
+Renomeie a pasta criada. Se ao executar o comando abaixo ocorrer um erro com a mensagem iniciando com “mv: é impossível sobrescrever o não-diretório”, pule este passo;
+
+sudo mv /usr/lib/jvm/jre*/ /usr/lib/jvm/jre
+
+//***************************************************************************************************************//
+
+REMOVE UM ARQUIVO
+
+desenvolvedor@desenvolvedor-Linux ~ $ sudo rm -rf '/usr/lib/j
+
+sudo rm -rf diretório
+apagando uma pasta dentro de um diretório sudo (no caso /opt   ou /usr /etc...)
+sudo rm -rf diretório
+
+//***************************************************************************************************************//
+
+copiando uma pasta para outra com linux (No caso estou copiando a pasta sts-bundle para /opt)
+sudo cp -r '/home/leandro/Downloads/sts-bundle' /opt
+
+//***************************************************************************************************************//
+UTILIZANDO O VI PARA EDITAR UM ARQUIVO
+//***************************************************************************************************************//
+leandro@leandro-S500CA ~ $ vi .git-credentials
+
+ao abrir este arquivo os comando para edição, salvar e sair  são:
+
+Para habilitarmos a opção de edição de texto temos que apertar a tecla INSERT
+agora sim podemos editar o texto à vontade:
+
+bom depois de feito nosso texto agora temos que sair e salvar
+para que poçamos usar as opções sair salvar entre outros temos que apertar ESC
+depois disso devemos digitar
+:q = esse comando fara com que você saia do vi mais nao salva o arquivo
+:w = esse comando salva seu arquivo mais não sai do vi
+:wq =esse comando salva e sai ao mesmo tempo 
+
+
+
+
+
